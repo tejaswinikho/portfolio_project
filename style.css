@@ -1,0 +1,628 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  overflow-x: hidden;
+}
+
+nav {
+  width: 100%;
+  height: auto;
+  position: sticky;
+  top: 0;
+}
+
+.nav-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.logo {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.logo span {
+  color: rgba(211, 3, 3);
+  text-shadow: 0 0 10px rgba(211, 3, 3);
+}
+
+.hamburg,
+.cancel {
+  cursor: pointer;
+  position: absolute;
+  right: 15px;
+  top: 20px;
+  color: white;
+  display: none;
+  font-size: clamp(1.5rem, 0.5rem + 5vw, 3rem);
+}
+
+.nav-container .links {
+  display: flex;
+}
+
+.nav-container .links a {
+  font-size: 1.2rem;
+  color: white;
+  margin: 0 20px;
+  text-decoration: none;
+  font-weight: 550;
+  transition: 0.3s linear;
+}
+
+.nav-container .links a:hover {
+  color: rgba(211, 3, 3);
+  border-bottom: 2px solid rgba(211, 3, 3);
+}
+
+.dropdown {
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  transform: translateY(-500px);
+  width: 100%;
+  height: auto;
+  backdrop-filter: blur(4px) brightness(40%);
+  box-shadow: 0 0 20px black;
+  transition: 0.2s linear;
+}
+
+.dropdown .links a {
+  display: flex;
+  color: white;
+  text-decoration: none;
+  padding: 15px 0;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s linear;
+}
+
+.dropdown .links a:hover {
+  background-color: rgba(211, 3, 3);
+}
+
+section {
+  width: 100%;
+  height: 90vh;
+}
+
+.main-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.main-container .content {
+  color: white;
+  width: 40%;
+  min-height: 100px;
+}
+
+.content h1 {
+  font-size: clamp(1rem, 1rem + 5vw, 1.8rem);
+}
+
+.content h1 span {
+  font-weight: 700;
+  text-shadow: 0 0 10px rgba(211, 3, 3);
+  color: rgba(211, 3, 3);
+}
+
+.content .typewriter {
+  font-size: clamp(1rem, 1rem + 5vw, 2.5rem);
+  font-weight: 700;
+}
+
+.typewriter span {
+  color: rgba(211, 3, 3);
+  text-shadow: 0 0 10px rgba(211, 3, 3);
+}
+
+.content p {
+  font-size: clamp(0.4rem, 0.2rem + 9vw, 1rem);
+  margin: 10px 0;
+}
+
+.social-links i {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  background-color: transparent;
+  border: 0.2rem solid rgba(211, 3, 3);
+  border-radius: 50%;
+  color: rgba(211, 3, 3);
+  margin: 0 15px;
+  font-size: 1.5rem;
+  transition: 0.2s linear;
+}
+/* Style for the social media icons */
+.social-links a {
+  margin: 0 10px; /* Adjust spacing between icons */
+  color: #fff; /* Icon color */
+  font-size: 24px; /* Adjust icon size */
+  transition: color 0.3s ease;
+  text-decoration: none; /* Remove underline from the icons */
+  border: none; /* Remove any border */
+  background: none; /* Remove any background */
+  padding: 5px; /* Optional: Add some padding around the icons */
+}
+
+/* Optional hover effect */
+.social-links a:hover {
+  color: #ff0000; /* Change color on hover */
+  border: none; /* Ensure no border on hover */
+  background: none; /* Ensure no background on hover */
+}
+
+.content button {
+  width: 50%;
+  height: 6vh;
+  margin: 30px;
+  background-color: rgba(211, 3, 3);
+  color: white;
+  border: none;
+  outline: none;
+  font-size: 120%;
+  font-weight: 700;
+  border-radius: 5px;
+  transition: 0.2s linear;
+}
+
+.content button:hover {
+  scale: 1.1;
+  color: rgba(211, 3, 3);
+  border: 2px solid rgba(211, 3, 3);
+  background-color: transparent;
+  font-weight: 700;
+  box-shadow: 0 0 40px 5px rgba(211, 3, 3);
+}
+
+.btn a button {
+  background-color: #ff0000; /* Button background color */
+  color: #fff; /* Text color */
+  padding: 10px 20px; /* Padding inside the button */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer on hover */
+  font-size: 16px; /* Font size */
+  transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+.btn a button:hover {
+  background-color: #ff4d4d; /* Lighter red on hover */
+}
+
+
+.main-container .image {
+  width: 500px;
+  height: 80vh;
+  border-radius: 100%;
+  overflow: hidden;
+  box-shadow: 0 0 50px rgba(211, 3, 3);
+}
+
+.main-container .image img {
+  width: 100%;
+}
+
+.main-container .image:hover {
+  animation: animate 1.5s ease-in-out;
+}
+
+@keyframes animate {
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.05;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+@media (max-width: 884px) {
+  nav.logo {
+    position: absolute;
+    top: 16px;
+    left: 15px;
+    font-size: 1.5rem;
+  }
+
+  .main-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .nav-container .links {
+    display: none;
+  }
+
+  .hamburg,
+  .cancel {
+    display: block;
+  }
+
+  .main-container .content {
+    width: 80%;
+  }
+  
+  .social-links i {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.5rem;
+  }
+
+  .main-container .image {
+    width: 50%;
+    height: 60%;
+  }
+}
+
+@media (max-width: 440px) {
+  .main-container .image {
+    width: 70%;
+    height: 60%;
+  }
+
+  .main-container .content {
+    width: 80%;
+  }
+
+  .main-container button {
+    margin-top: 15px;
+  }
+}
+
+/* Ensure that the About section is centered */
+#about {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;     /* Center vertically */
+  min-height: 100vh;       /* Make sure the section takes full screen height */
+  text-align: center;      /* Center the text */
+  padding: 2rem 1rem;
+  background-color: #111;  /* Optional background color */
+  color: #fff;             /* Optional text color */
+}
+
+.about-container {
+  max-width: 800px;        /* Limit the width of the content */
+  width: 100%;             /* Ensure full width on smaller screens */
+}
+
+#about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+#about p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Center the entire Skills section */
+#skills {
+  display: flex;
+  justify-content: center;  /* Center horizontally */
+  align-items: center;      /* Center vertically */
+  flex-direction: column;   /* Stack elements vertically */
+  min-height: 100vh;        /* Full screen height */
+  padding: 2rem 1rem;
+  background-color: #111;   /* Optional background color */
+  color: #fff;              /* Optional text color */
+  text-align: center;
+}
+
+/* Center the skills container */
+.skills-container {
+  max-width: 1200px;        /* Set a maximum width */
+  width: 100%;
+  display: flex;
+  justify-content: center;  /* Center skill items horizontally */
+  flex-wrap: wrap;          /* Allow items to wrap to the next line */
+  gap: 2rem;                /* Space between skill items */
+}
+
+/* Style individual skill items */
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;      /* Center the content inside each skill item */
+  justify-content: center;
+  background-color: #222;   /* Optional background color for skills */
+  padding: 1.5rem;
+  border-radius: 10px;      /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: center;
+  width: 250px;             /* Set a fixed width for each skill item */
+  transition: transform 0.3s; /* Smooth hover effect */
+}
+
+/* Add a hover effect for skill items */
+.skill:hover {
+  transform: translateY(-10px); /* Lift the skill card slightly on hover */
+}
+
+.skill i {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #00bcd4;           /* Optional icon color */
+}
+
+.skill h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.skill p {
+  font-size: 1rem;
+  color: #bbb;              /* Optional text color */
+}
+
+/* Style the Projects section */
+#projects {
+  display: flex;
+  justify-content: center;    /* Center the content horizontally */
+  align-items: center;        /* Align the content vertically */
+  flex-direction: column;     /* Stack the heading and projects vertically */
+  padding: 2rem 1rem;
+  background-color: #111;     /* Optional background color */
+  color: #fff;                /* Optional text color */
+  text-align: center;
+}
+
+/* Style the projects container */
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;            /* Wrap the project cards to the next line if needed */
+  justify-content: center;    /* Center the project cards horizontally */
+  gap: 1.5rem;                /* Space between project cards */
+  max-width: 1200px;           /* Limit the maximum width of the container */
+  width: 100%;                /* Make sure it adapts to smaller screens */
+  margin: 0 auto;             /* Center the container */
+}
+
+/* Style individual project items */
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #222;     /* Background color for project cards */
+  border-radius: 10px;        /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 1.5rem;
+  width: 100%;                /* Set to full width of container */
+  max-width: 280px;           /* Limit the maximum width for project cards */
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+/* Add hover effect for project cards */
+.project:hover {
+  transform: translateY(-10px); /* Slight lift on hover */
+}
+
+.project img {
+  width: 100%;                /* Make the image fully responsive */
+  border-radius: 10px;         /* Rounded corners for the image */
+  margin-bottom: 1rem;
+}
+
+.project h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.project p {
+  font-size: 1rem;
+  color: #bbb;
+  margin-bottom: 1rem;
+}
+
+.project a {
+  font-size: 1rem;
+  color: #00bcd4;             /* Optional link color */
+  text-decoration: none;
+}
+
+.project a:hover {
+  text-decoration: underline;
+}
+
+
+  
+/* Center the entire Services section */
+#services {
+  display: flex;
+  justify-content: center;  /* Center horizontally */
+  align-items: center;      /* Center vertically */
+  flex-direction: column;   /* Stack the heading and services vertically */
+  min-height: 100vh;        /* Full screen height */
+  padding: 2rem 1rem;
+  background-color: #111;   /* Optional background color */
+  color: #fff;              /* Optional text color */
+  text-align: center;
+}
+
+/* Center the services container */
+.services-container {
+  max-width: 1200px;        /* Set a maximum width */
+  width: 100%;              /* Full width on smaller screens */
+  display: flex;
+  justify-content: center;  /* Center the service items horizontally */
+  flex-wrap: wrap;          /* Wrap items to next line if necessary */
+  gap: 2rem;                /* Add space between service items */
+}
+
+/* Style individual service items */
+.service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;      /* Center the content of each service item */
+  justify-content: center;
+  background-color: #222;   /* Optional background color for services */
+  padding: 1.5rem;
+  border-radius: 10px;      /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: center;
+  width: 250px;             /* Set a fixed width for each service item */
+  transition: transform 0.3s; /* Smooth hover effect */
+}
+
+/* Add a hover effect for service items */
+.service:hover {
+  transform: translateY(-10px); /* Slight lift on hover */
+}
+
+.service i {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #00bcd4;           /* Optional icon color */
+}
+
+.service h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.service p {
+  font-size: 1rem;
+  color: #bbb;              /* Optional text color */
+}
+
+
+
+/* Contact Section */
+#contact {
+  padding: 50px;
+  background-color: #ffffff;
+  color: black;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.contact form {
+  max-width: 800px;
+  margin: auto;
+}
+
+.input-group {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.input-box {
+  width: 48%;
+}
+
+.input-box input, .input-group-2 textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.input-box input:focus, .input-group-2 textarea:focus {
+  border-color: rgba(211, 3, 3);
+  outline: none;
+}
+
+.input-group-2 {
+  margin-top: 20px;
+}
+
+.input-group-2 textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.input-group-2 .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgba(211, 3, 3);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.input-group-2 .btn:hover {
+  background-color: rgba(211, 3, 3);
+}
+
+/* Footer */
+.footer {
+  position: relative;
+  padding: 30px;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+.footer .social {
+  margin-bottom: 20px;
+}
+
+.footer .social a {
+  color: white;
+  font-size: 1.5rem;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.footer .social a:hover {
+  color: rgba(211, 3, 3);
+}
+
+.footer .list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.footer .list li {
+  display: inline;
+  margin: 0 10px;
+}
+
+.footer .list a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.footer .list a:hover {
+  color: rgba(211, 3, 3);
+}
+
+.footer .copyright {
+  font-size: 1rem;
+}

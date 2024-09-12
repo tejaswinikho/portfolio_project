@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio Website</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+                Tejashwini<span>Khot</span>
+            </div>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="#">Home</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="#about">About</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="#skills">Skills</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="#projects">Projects</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a href="#services">Services</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600"><a href="#contact">Contact</a></div>
+            </div>
+        </div>
+        <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        <div class="dropdown">
+            <div class="links">
+                <a href="#">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home">
+        <div class="main-container">
+            <div class="content">
+                <h1 data-aos="fade-left" data-aos-duration="1500" data-aos-delay="700">Hey I'm <span>Tejashwini</span></h1>
+                <div data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900" class="typewriter">I'm a <span class="typewriter-text"></span></div>
+                <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1100">I am Tejashwini Khot, a Fresher</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/tejashwini-khot/" target="_blank" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/tejashwinikho" target="_blank" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1400"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.instagram.com/tejashwini.khot" target="_blank" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1500"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <div class="btn" data-aos="zoom-out" data-aos-duration="1500" data-aos-delay="1800">
+                    <a href="https://drive.google.com/file/d/1dnRqtkCbfCBkdvk9msoKLvH2G2BeIre3/view?usp=drivesdk" target="_blank">
+                    <button>Download CV</button>
+                </div>
+            </div>
+            <div class="image" data-aos="zoom-in" data-aos-duration="3000">
+                <img src="teju.jpg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section-->
+    <section id="about">
+        <div class="about-container">
+            <h2 data-aos="fade-up" data-aos-duration="1500">About Me</h2>
+            <p data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
+                I am a passionate web developer with a keen interest in creating dynamic and responsive web applications. 
+                My expertise lies in front-end and back-end development, and I am always looking for new opportunities to 
+                grow my skillset. This portfolio showcases some of my key projects, skills, and services I offer.
+            </p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="skills-container">
+            <h2 data-aos="fade-up" data-aos-duration="1500">Skills</h2>
+            <div class="skill" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
+                <i class="fa-solid fa-code"></i>
+                <h3>Web Development</h3>
+                <p>HTML, CSS, JavaScript, React</p>
+            </div>
+            <div class="skill" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
+                <i class="fa-solid fa-database"></i>
+                <h3>Databases</h3>
+                <p>MySQL</p>
+            </div>
+            <div class="skill" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">
+                <i class="fa-solid fa-server"></i>
+                <h3>Backend Development</h3>
+                <p>Java</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+<section id="projects">
+    <div class="projects-container">
+        <h2 data-aos="fade-up" data-aos-duration="1500">Projects</h2>
+
+        <!-- Project 1: eCommerce Website -->
+        <div class="project" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
+            <img src="./assest/Ecommerce_website.jpg" alt="eCommerce Website Image"> <!-- Replace with your project image -->
+            <div class="project-details">
+                <h3>eCommerce Website</h3>
+                <p>A fully responsive eCommerce website with dynamic product listings, a shopping cart, and user-friendly navigation. Built using HTML, CSS, and JavaScript.</p>
+                <a href="https://tejaswinikho.github.io/ecommerce_website/" target="_blank">View Live Project</a> <!-- Link to your project -->
+            </div>
+        </div>
+
+        <!-- Project 2: Landing Page -->
+        <div class="project" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
+            <img src="./assest/Landing_page.jpg" alt="Landing Page Image"> <!-- Replace with your project image -->
+            <div class="project-details">
+                <h3>Landing Page</h3>
+                <p>A responsive landing page with modern design and smooth animations. Built using HTML, CSS, and JavaScript, it features clean UI and a dynamic user interface.</p>
+                <a href="https://tejaswinikho.github.io/landing_page2/" target="_blank">View Live Project</a>
+            </div>
+        </div>
+
+        <!-- Project 3: Coffee Shop Website -->
+        <div class="project" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">
+            <img src="./assest/coffeshop_project.jpg" alt="Coffee Shop Website Image"> <!-- Replace with your project image -->
+            <div class="project-details">
+                <h3>Coffee Shop Website</h3>
+                <p>A beautifully designed coffee shop website that showcases the brand, menu, and services. Built using HTML, CSS, and JavaScript, with an emphasis on clean design and ease of navigation.</p>
+                <a href="https://tejaswinikho.github.io/Coffe-Shop/" target="_blank">View Live Project</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="services-container">
+            <h2 data-aos="fade-up" data-aos-duration="1500">Services</h2>
+            <div class="service" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
+                <i class="fa-solid fa-laptop-code"></i>
+                <h3>Web Development</h3>
+                <p>Building responsive and dynamic websites.</p>
+            </div>
+            <div class="service" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
+                <i class="fa-solid fa-mobile-alt"></i>
+                <h3>Mobile App Development</h3>
+                <p>Creating cross-platform mobile applications.</p>
+            </div>
+            <div class="service" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">
+                <i class="fa-solid fa-search"></i>
+                <h3>SEO Optimization</h3>
+                <p>Improving search engine rankings and visibility.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me</span></h2>
+        <form action="https://formspree.io/f/{your_form_id}" method="POST">
+            <div class="input-group">
+                <div class="input-box">
+                    <input type="text" name="name" placeholder="Full Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="input-box">
+                    <input type="tel" name="phone" placeholder="Phone Number" required>
+                    <input type="text" name="subject" placeholder="Subject" required>
+                </div>
+            </div>
+            <div class="input-group-2">
+                <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                <input type="submit" value="Send Message" class="btn">
+            </div>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="social">
+            <a href="https://www.linkedin.com/in/tejashwini-khot/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/tejashwinikhot" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.instagram.com/tejashwini.khot" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+        <ul class="list">
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About Me</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Projects</a></li>
+        </ul>
+        <p class="copyright">@ Tejashwini Khot || All rights reserved</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
